@@ -9,20 +9,18 @@ from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
 # Play a sound
-brick.sound.beep()
+brick.sound.file("taistelujaska.mp3")
 
-# Initialize a motor at port 
-B.test_motor = Motor(Port.B)
+# Initialize a motor at port
+#B.test_motor = Motor(Port.B)
 
 # Run the motor up to 500 degrees per second. To a target angle of 90 degrees.
-test_motor.run_target(500, 90) 
+#test_motor.run_target(500, 90)
 
 # Play another beep sound.
 # This time with a higher pitch (1000 Hz) and longer duration (500 ms).
-brick.sound.beep(1000, 500)
+#brick.sound.beep(1000, 500)
 
 # Low battery warning
 if brick.battery.voltage() < 7000:
     brick.sound.beep()
-
-
