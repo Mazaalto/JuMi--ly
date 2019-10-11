@@ -9,7 +9,7 @@ from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
 # Play a sound
-brick.sound.file("Taistelujaska.mp3")
+playSoundFile("Taistelujaska.wav")
 
 # Initialize a motor at port
 #B.test_motor = Motor(Port.B)
