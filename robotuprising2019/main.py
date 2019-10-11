@@ -21,8 +21,6 @@ test_motor.run_target(500, 90)
 # This time with a higher pitch (1000 Hz) and longer duration (500 ms).
 brick.sound.beep(1000, 500)
 
-# Low battery warning
-if brick.battery.voltage() < 7000:
-    brick.sound.beep()
+
 
 
