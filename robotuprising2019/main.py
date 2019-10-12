@@ -8,9 +8,21 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
-# Play a sound
-brick.sound.file("Taistelujaska.wav")
 
+
+Vmoottori = Motor(Port.B, Direction.CLOCKWISE)
+Omoottori = Motor(Port.C, Direction.COUNTERCLOCKWISE)
+
+# Play a sound
+brick.sound.file("Taistelujaska.wav)
+time.sleep(2)
+
+Vmoottori.run(100)
+Omoottori.run(100)
+time.sleep(4)
+
+Vmoottori.stop()
+Omoottori.stop()
 # Initialize a motor at port
 #B.test_motor = Motor(Port.B)
 
