@@ -23,6 +23,13 @@ time.sleep(4)
 
 Vmoottori.stop()
 Omoottori.stop()
+
+Vmoottori.run(-100)
+Omoottori.run(100)
+time.sleep(1)
+
+Vmoottori.stop()
+Omoottori.stop()
 # Initialize a motor at port
 #B.test_motor = Motor(Port.B)
 
