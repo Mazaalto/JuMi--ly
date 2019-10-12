@@ -1,5 +1,4 @@
 #!/usr/bin/env pybricks-micropython
-import time
 from pybricks import ev3brick as brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -7,8 +6,6 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
                                  SoundFile, ImageFile, Align)
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
-
-import time
 
 Vmoottori = Motor(Port.B, Direction.CLOCKWISE)
 Omoottori = Motor(Port.C, Direction.CLOCKWISE)
@@ -22,9 +19,12 @@ variSensori = ColorSensor(Port.S2)
 i = 0
 while i < 50:
     vari = variSensori.Color()
-    print(vari)
-    i++
-    time.sleep(0.300)or at port
+    if vari == 6:
+        Vmoottori.run(1000)
+        Omoottori.run(1000)
+    else:
+        Vmoottori.run(1000)
+        Omoottori.run(-1000)
 #B.test_motor = Motor(Port.B)
 
 # Run the motor up to 500 degrees per second. To a target angle of 90 degrees.
