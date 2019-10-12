@@ -23,26 +23,21 @@ i=0
 laskuri = 0
 while i < 50000:
     vari = variSensori.color()
-    Vmoottori.run(-300)
-    Omoottori.run(-300)
-    time.sleep(0.05)
     if vari == 6:
-        Vmoottori.run(200)
-        Omoottori.run(-200)
-        time.sleep(0.2)
-        Vmoottori.run(-200)
-        Omoottori.run(-200)
-        time.sleep(1)
-        Vmoottori.run(-200)
-        Omoottori.run(200)
-        time.sleep(0.5)
-    i +=1
-    laskuri += 1
-    if laskuri > 30:
-        Vmoottori.run(-200)
-        Omoottori.run(200)
-        time.sleep(1)
+        Vmoottori.run(50)
+        Omoottori.run(-120)
+        time.sleep(2.5)
+        laskuri += 1
+    else:
+        Vmoottori.run(-150)
+        Omoottori.run(-70)
+        time.sleep(0.1)
+    if laskuri >= 2:
+        Vmoottori.run(100)
+        Omoottori.run(100)
+        time.sleep(2)
         laskuri = 0
+
     #print(vari)
 
 
