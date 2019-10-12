@@ -10,9 +10,6 @@ from pybricks.robotics import DriveBase
 
 import time
 
-irSensor = InfraredSensor(Port.S1)
-print(irSensor.distance())
-
 Vmoottori = Motor(Port.B, Direction.CLOCKWISE)
 Omoottori = Motor(Port.C, Direction.CLOCKWISE)
 
