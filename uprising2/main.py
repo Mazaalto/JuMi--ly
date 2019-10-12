@@ -20,6 +20,7 @@ variSensori = ColorSensor(Port.S2)
 va = True
 reitilla = False
 i=0
+laskuri = 0
 while i < 50000:
     vari = variSensori.color()
     Vmoottori.run(-300)
@@ -28,14 +29,20 @@ while i < 50000:
     if vari == 6:
         Vmoottori.run(200)
         Omoottori.run(-200)
-        time.sleep(2)
+        time.sleep(0.2)
         Vmoottori.run(-200)
         Omoottori.run(-200)
         time.sleep(1)
         Vmoottori.run(-200)
         Omoottori.run(200)
-        time.sleep(1)
+        time.sleep(0.2)
     i +=1
+    laskuri += 1
+    if laskuri > 20:
+        Vmoottori.run(-200)
+        Omoottori.run(200)
+        time.sleep(1)
+        laskuri = 0
     #print(vari)
 
 
