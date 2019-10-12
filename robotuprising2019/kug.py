@@ -8,25 +8,19 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
-import time
-
 vmoottori = Motor(Port.B, Direction.CLOCKWISE)
 omoottori = Motor(Port.C, Direction.CLOCKWISE)
-#variSensori = ColorSensor(Port.D)
+variSensori = ColorSensor(Port.D)
 
 # Play a sound
 #brick.sound.file("Taistelujaska.wav")
 i = 0
 while i < 50:
-    vari = Color.WHITE
-    if vari == Color.WHITE:
-        vmoottori.run(500)
-        omoottori.run(500)
-    i+=10;
-    time.sleep(1)
-    brick.sound.beep()
-vmoottori.stop()
-omoottori.stop()
+    vari = variSensori.Color()
+    print(vari)
+    i++
+    time.sleep(0.300)
+
 
 # Initialize a motor at port
 #B.test_motor = Motor(Port.B)
