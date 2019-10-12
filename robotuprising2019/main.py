@@ -8,14 +8,16 @@ from pybricks.parameters import (Port, Stop, Direction, Button, Color,
 from pybricks.tools import print, wait, StopWatch
 from pybricks.robotics import DriveBase
 
-irSensor = UltrasonicSensor(Port.S1)
+import time
+
+irSensor = InfraredSensor(Port.S1)
 print(irSensor.distance())
 
 Vmoottori = Motor(Port.B, Direction.CLOCKWISE)
-Omoottori = Motor(Port.C, Direction.COUNTERCLOCKWISE)
+Omoottori = Motor(Port.C, Direction.CLOCKWISE)
 
 # Play a sound
-brick.sound.file("Taistelujaska.wav)
+#brick.sound.file("Taistelujaska.wav")
 time.sleep(2)
 
 Vmoottori.run(100)
