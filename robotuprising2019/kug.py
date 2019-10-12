@@ -23,6 +23,7 @@ while i < 50:
         vmoottori.run(500)
         omoottori.run(500)
     i+=10;
+    time.sleep(1)
     brick.sound.beep()
 vmoottori.stop()
 omoottori.stop()
