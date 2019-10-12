@@ -15,22 +15,16 @@ Omoottori = Motor(Port.C, Direction.CLOCKWISE)
 
 # Play a sound
 #brick.sound.file("Taistelujaska.wav")
-time.sleep(2)
+variSensori = ColorSensor(Port.S2)
 
-Vmoottori.run(100)
-Omoottori.run(100)
-time.sleep(4)
-
-Vmoottori.stop()
-Omoottori.stop()
-
-Vmoottori.run(-100)
-Omoottori.run(100)
-time.sleep(1)
-
-Vmoottori.stop()
-Omoottori.stop()
-# Initialize a motor at port
+# Play a sound
+#brick.sound.file("Taistelujaska.wav")
+i = 0
+while i < 50:
+    vari = variSensori.Color()
+    print(vari)
+    i++
+    time.sleep(0.300)or at port
 #B.test_motor = Motor(Port.B)
 
 # Run the motor up to 500 degrees per second. To a target angle of 90 degrees.
