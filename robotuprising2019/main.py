@@ -22,20 +22,14 @@ variSensori = ColorSensor(Port.S2)
 #brick.sound.file("Taistelujaska.wav")
 i = 0
 while i < 50:
-<<<<<<< HEAD
     vari = variSensori.Color()
     if vari == 6:
-        Vmoottori.run(1000)
-        Omoottori.run(1000)
+        Vmoottori.run(-1000)
+        Omoottori.run(-1000)
     else:
         Vmoottori.run(1000)
         Omoottori.run(-1000)
-=======
-    vari = variSensori.color()
     print(vari)
-    i += 1
-    time.sleep(0.300) 
->>>>>>> 420289aad1a724688013bc836fb1414d5031a2db
 #B.test_motor = Motor(Port.B)
 
 # Run the motor up to 500 degrees per second. To a target angle of 90 degrees.
@@ -48,4 +42,3 @@ while i < 50:
 # Low battery warning
 if brick.battery.voltage() < 7000:
     brick.sound.beep()
-
